@@ -1,0 +1,46 @@
+/* Establecer un tamaño fijo para el contenedor del carrusel dentro de la tarjeta */
+.card {
+    height: 300px; /* Mantener el tamaño consistente */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5%;
+  }
+  
+  .carousel-inner {
+    width: 100%;
+    height: 200px; /* Fijar el tamaño del contenedor de imágenes */
+    overflow: hidden;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantener las proporciones de las imágenes */
+  }
+  
+  .card-body {
+    flex-grow: 1;
+    // text-align: center;
+  }
+  
+  /* Asegurar que el título y el texto no se muevan */
+  .card-title, .card-text {
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  
+  .carousel-control-prev, .carousel-control-next {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+//   @media (max-width: 770px) {
+//     .container {
+//         display: flex;
+//         justify-content: center;
+//         justify-items: center;
+//     }
+  
+//   }

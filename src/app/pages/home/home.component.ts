@@ -1,10 +1,11 @@
 import { NgClass, NgFor } from '@angular/common';
 import { Component,} from '@angular/core';
+import { PortfolioComponent } from "../portfolio/portfolio.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgFor, NgClass],
+  imports: [NgFor, NgClass, PortfolioComponent,PortfolioComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
