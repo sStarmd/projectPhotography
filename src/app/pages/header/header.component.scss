@@ -1,0 +1,150 @@
+$primary-color-letra: #656464; // Color gris
+$segundary-color-letra: #2f2f2f;
+
+header {
+  background-size: cover;
+  height: 100%; /* Establece una altura fija para el header */
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between; /* Distribuye espacio entre logo, nav y social */
+  align-items: center;
+  padding: 0 20px; /* Añade padding para evitar que los elementos toquen los bordes */
+  box-sizing: border-box; /* Asegura que el padding no aumente el tamaño total del header */
+  box-shadow: 0 4px 10px rgba(0,0,0,.08);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 90px; /* Ajusta la altura del logo para que quede dentro del header */
+}
+
+.logo img {
+  height: 100%; /* Asegura que la imagen del logo se ajuste a la altura del contenedor */
+  width: auto; /* Mantiene la proporción del logo */
+}
+
+nav {
+  flex-grow: 1; /* Permite que el contenedor nav ocupe el espacio disponible */
+  text-align: center; /* Centra la lista de navegación horizontalmente */
+}
+
+nav ul {
+  list-style: none;
+  display: inline-flex; /* Cambia display a inline-flex para que se alinee al centro */
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: $primary-color-letra; /* Un gris oscuro más suave que el negro */
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+nav ul li a:hover {
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  color: $segundary-color-letra; 
+  // text-decoration: underline;
+}
+
+.social {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.social svg {
+  width: 24px; /* Ajusta el tamaño de los íconos */
+  height: 24px; /* Ajusta el tamaño de los íconos */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  transition: transform 0.2s ease-in-out; /* Animación suave */
+}
+
+::ng-deep .social svg:hover {
+  transform: scale(1.1); /* Escala ligeramente al pasar por encima */
+}
+
+
+@media (max-width: 1024px) {
+  nav ul {
+      gap: 1.5rem; /* Reducimos el espacio entre los ítems del menú */
+  }
+
+  nav ul li a {
+      font-size: 1.5rem; /* Ajustamos el tamaño de las fuentes */
+  }
+
+  .social svg {
+      width: 20px;
+      height: 20px; /* Reducimos el tamaño de los íconos sociales */
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+      padding: 0 3px; /* Ajusta el padding */
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  nav ul {
+      // flex-direction: column; /* Cambiamos la dirección de los elementos del menú a vertical */
+      gap: 1rem;
+  }
+
+  nav ul li a {
+      font-size: 1rem; /* Reducimos el tamaño de la fuente */
+  }
+
+  .social {
+    gap: 5px;
+  }
+
+  .social svg {
+      width: 20px;
+      height: 20px; /* Reducimos el tamaño de los íconos sociales */
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+      padding: 0 3px; /* Ajusta el padding */
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  nav ul {
+      // flex-direction: column; /* Cambiamos la dirección de los elementos del menú a vertical */
+      gap: 0.5rem;
+  }
+
+  nav ul li a {
+      font-size: 1rem; /* Reducimos el tamaño de la fuente */
+  }
+
+  .social {
+    display: none;
+  }
+
+  .social svg {
+      width: 20px;
+      height: 20px; /* Reducimos el tamaño de los íconos sociales */
+  }
+}
+
+@media (max-width: 340px) {
+  nav ul li a {
+    font-size: 11px; /* Reducimos el tamaño de la fuente */
+}
+}
+
+nav ul li a.active {
+  font-weight: bold; /* Aplica negrita a los enlaces activos */
+  color: $segundary-color-letra; /* Cambia el color si lo deseas */
+}
