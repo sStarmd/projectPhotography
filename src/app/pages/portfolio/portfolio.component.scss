@@ -1,10 +1,23 @@
+// *{
+//   font-family: "Poppins", sans-serif;
+// }
+.container{
+  padding-top: 4%;
+}
+.projects{
+  display: flex;
+  justify-content: center;
+  margin-top: 5% ;
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+
 /* Establecer un tamaño fijo para el contenedor del carrusel dentro de la tarjeta */
 .card {
     height: 300px; /* Mantener el tamaño consistente */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 5%;
+    margin: 5% auto;
   }
   
   .carousel-inner {
@@ -36,11 +49,24 @@
     transform: translateY(-50%);
   }
   
-//   @media (max-width: 770px) {
-//     .container {
-//         display: flex;
-//         justify-content: center;
-//         justify-items: center;
-//     }
-  
-//   }
+
+  /* Efecto 3D para las tarjetas */
+.card {
+  perspective: 1000px; /* Simula profundidad en 3D */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transform-style: preserve-3d;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombras para dar profundidad */
+}
+
+/* Efecto al pasar el mouse sobre la tarjeta */
+.card:hover {
+  transform: rotateY(15deg) rotateX(10deg); /* Inclinación en los ejes Y y X */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+}
+
+/* Opcional: Ajuste para una mejor visualización en dispositivos móviles */
+@media (max-width: 768px) {
+  .card:hover {
+    transform: none; /* Elimina el efecto hover en pantallas pequeñas si es necesario */
+  }
+}

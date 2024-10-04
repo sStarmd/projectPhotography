@@ -24,9 +24,9 @@ img {
     "img1 img1 img2"
     "img1 img1 img3"
     "img4 img5 img6"
-    "img7 img7 img8"
-    "img7 img7 img9"
-    
+    "img8 img7 img7"
+    "img9 img7 img7"
+    "img10 img11 img12"    
     ;
     
 }
@@ -40,6 +40,9 @@ img {
 .img7 { grid-area: img7; }
 .img8 { grid-area: img8; }
 .img9 { grid-area: img9; }
+.img10 { grid-area: img10; }
+.img11 { grid-area: img11; }
+.img12 { grid-area: img12; }
 
 img:not(:hover) {
   filter: grayscale(100%);

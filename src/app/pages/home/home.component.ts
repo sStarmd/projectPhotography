@@ -1,11 +1,12 @@
 import { NgClass, NgFor } from '@angular/common';
 import { Component,} from '@angular/core';
 import { PortfolioComponent } from "../portfolio/portfolio.component";
+import { AboutComponent } from '../about/about.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgFor, NgClass, PortfolioComponent,PortfolioComponent],
+  imports: [NgFor, NgClass, PortfolioComponent,PortfolioComponent, AboutComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -20,6 +21,9 @@ export class HomeComponent {
     { src: '../../../assets/img/photo/butterfly1.jpeg', alt: 'Image 7', class: 'img7' },
     { src: '../../../assets/img/photo/butterfly2.jpg', alt: 'Image 8', class: 'img8' },
     { src: '../../../assets/img/photo/crow.jpg', alt: 'Image 9', class: 'img9' },
+    { src: '../../../assets/img/photo/heron.jpeg', alt: 'Image 10', class: 'img10' },
+    { src: '../../../assets/img/photo/heron.jpeg', alt: 'Image 11', class: 'img11' },
+    { src: '../../../assets/img/photo/heron.jpeg', alt: 'Image 12', class: 'img12' },
   ];
   // images = [
   //   { url: 'https://www.dropbox.com/s/abcd1234/imagen1.jpg?dl=1' },
